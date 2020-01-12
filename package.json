@@ -11,5 +11,15 @@
     "Snippets"
   ],
   "contributes": {
+    "snippets": [
+      {
+        "language": "javascript",
+        "path": "./snippets/js+ts.json"
+      },
+      {
+        "language": "typescript",
+        "path": "./snippets/js+ts.json"
+      }
+    ]
   }
 }

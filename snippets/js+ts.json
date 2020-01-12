@@ -1,0 +1,7 @@
+{
+  "when": {
+    "prefix": "when",
+    "body": ["describe('when ${1:something}', () => {", "\t${0}", "})"],
+    "description": "describe(when …)"
+  }
+}
