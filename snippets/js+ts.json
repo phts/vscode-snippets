@@ -1,7 +1,105 @@
 {
-  "when": {
-    "prefix": "when",
-    "body": ["describe('when ${1:something}', () => {", "\t${0}", "})"],
-    "description": "describe(when …)"
+  "es: arrow": {
+    "body": ["() => ${0:body}"],
+    "description": "… => …",
+    "prefix": "arrow"
+  },
+  "es: constructor": {
+    "body": ["constructor($1) {", "\t$0", "}"],
+    "description": "constructor(…) { … }",
+    "prefix": "constructor"
+  },
+  "es: export": {
+    "body": ["export $1"],
+    "description": "export …",
+    "prefix": "export"
+  },
+  "es: exportd": {
+    "body": ["export default ${1:$TM_FILENAME_BASE}"],
+    "description": "export default …",
+    "prefix": "exportd"
+  },
+  "es: exportf": {
+    "body": ["export ${2:*} from '$1'"],
+    "description": "export … from …",
+    "prefix": "exportf"
+  },
+  "es: import react": {
+    "body": ["import React from 'react'"],
+    "description": "import React…",
+    "prefix": "importreact"
+  },
+  "es: import styled": {
+    "body": ["import styled from 'styled-components'"],
+    "description": "import styled…",
+    "prefix": "importstyled"
+  },
+  "es: importd": {
+    "body": ["import $2 from '$1'"],
+    "description": "import … from …",
+    "prefix": "importd"
+  },
+  "es: importas": {
+    "body": ["import * as ${2:$1} from '$1'"],
+    "description": "import * as…",
+    "prefix": "importas"
+  },
+  "jest: mock": {
+    "body": [
+      "jest.mock('${1:module}', () => ({",
+      "\tdefault: jest.fn(),$0",
+      "}))"
+    ],
+    "description": "jest.mock(…)",
+    "prefix": "mock"
+  },
+  "jest: when": {
+    "body": ["describe('when ${1:something}', () => {", "\t$0", "})"],
+    "description": "describe(when …)",
+    "prefix": "when"
+  },
+  "react: constructorp": {
+    "body": ["constructor(props: ${1:Props}) {", "\tsuper(props)", "\t$0", "}"],
+    "description": "constructor(props) { … }",
+    "prefix": "constructorp"
+  },
+  "react: importcomp": {
+    "body": ["import $1 from '${2:.}/$1'"],
+    "description": "import Comp from './Comp'",
+    "prefix": "importcomp"
+  },
+  "react: styled component": {
+    "body": ["styled.${1:div}`", "\t$0", "`"],
+    "description": "styled.…",
+    "prefix": "styled"
+  },
+  "tpl: tpljesttest": {
+    "body": [
+      "import React from 'react'",
+      "import { create } from 'react-test-renderer'",
+      "",
+      "import ${1:${TM_FILENAME/\\..*$//}} from './${1:${TM_FILENAME/\\..*$//}}'",
+      "",
+      "describe('${1:${TM_FILENAME/\\..*$//}}', () => {",
+      "\tit('renders component', () => {",
+      "\t\tconst component = create(<${1:${TM_FILENAME/\\..*$//}}/>).toJSON()",
+      "\t\texpect(component).toMatchSnapshot()",
+      "\t})$0",
+      "})"
+    ],
+    "description": "tpl: jest test",
+    "prefix": "tpljesttest"
+  },
+  "tpl: tplstyledcomponent": {
+    "body": [
+      "import styled from 'styled-components'",
+      "const ${1:$TM_FILENAME_BASE} = styled.div`",
+      "\t$0",
+      "`",
+      "",
+      "export default ${1:$TM_FILENAME_BASE}"
+    ],
+    "description": "tpl: styled-component",
+    "prefix": "tplstyledcomponent"
   }
 }

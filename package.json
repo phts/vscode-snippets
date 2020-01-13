@@ -17,8 +17,36 @@
         "path": "./snippets/js+ts.json"
       },
       {
+        "language": "javascript",
+        "path": "./snippets/js.json"
+      },
+      {
+        "language": "javascriptreact",
+        "path": "./snippets/js+ts.json"
+      },
+      {
+        "language": "javascriptreact",
+        "path": "./snippets/js.json"
+      },
+      {
         "language": "typescript",
         "path": "./snippets/js+ts.json"
+      },
+      {
+        "language": "typescript",
+        "path": "./snippets/ts.json"
+      },
+      {
+        "language": "typescriptreact",
+        "path": "./snippets/js+ts.json"
+      },
+      {
+        "language": "typescriptreact",
+        "path": "./snippets/ts.json"
+      },
+      {
+        "language": "json",
+        "path": "./snippets/json.json"
       }
     ]
   }

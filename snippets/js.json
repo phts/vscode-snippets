@@ -1,0 +1,76 @@
+{
+  "react: class component": {
+    "body": [
+      "class ${1:$TM_FILENAME_BASE} extends React.Component {",
+      "\tstate = {}",
+      "",
+      "\tconstructor(props) {",
+      "\t\tsuper(props)",
+      "\t}",
+      "",
+      "\tcomponentDidMount() {",
+      "\t}",
+      "",
+      "\trender() {$0",
+      "\t\treturn (",
+      "\t\t\t<div>",
+      "\t\t\t\t{this.props.children}",
+      "\t\t\t</div>",
+      "\t\t)",
+      "\t}",
+      "}",
+      "",
+      "${1:$TM_FILENAME_BASE}.propTypes = {",
+      "\tchildren: PropTypes.oneOfType([",
+      "\t\tPropTypes.arrayOf(PropTypes.node),",
+      "\t\tPropTypes.node",
+      "\t]).isRequired,",
+      "}",
+      "",
+      "export default ${1:$TM_FILENAME_BASE}"
+    ],
+    "description": "class Component…",
+    "prefix": "componentclass"
+  },
+  "react: functional component": {
+    "body": [
+      "const ${1:$TM_FILENAME_BASE} = ({ children }) => (",
+      "\t<div>$0",
+      "\t\t{children}",
+      "\t</div>",
+      ")",
+      "",
+      "${1:$TM_FILENAME_BASE}.propTypes = {",
+      "\tchildren: PropTypes.oneOfType([",
+      "\t\tPropTypes.arrayOf(PropTypes.node),",
+      "\t\tPropTypes.node",
+      "\t]).isRequired,",
+      "}",
+      "",
+      "export default ${1:$TM_FILENAME_BASE}"
+    ],
+    "description": "const Component…",
+    "prefix": "componentfunc"
+  },
+  "react: functional component with return": {
+    "body": [
+      "const ${1:$TM_FILENAME_BASE} = ({ children }) => {",
+      "\tconst [state, setState] = useState({})",
+      "\treturn <div>$0",
+      "\t\t{children}",
+      "\t</div>",
+      "}",
+      "",
+      "${1:$TM_FILENAME_BASE}.propTypes = {",
+      "\tchildren: PropTypes.oneOfType([",
+      "\t\tPropTypes.arrayOf(PropTypes.node),",
+      "\t\tPropTypes.node",
+      "\t]).isRequired,",
+      "}",
+      "",
+      "export default ${1:$TM_FILENAME_BASE}"
+    ],
+    "description": "const Component…",
+    "prefix": "componentfunchooks"
+  }
+}
