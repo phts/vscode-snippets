@@ -34,15 +34,15 @@
     "description": "import styled…",
     "prefix": "importstyled"
   },
-  "es: importd": {
-    "body": ["import $2 from '$1'"],
-    "description": "import … from …",
-    "prefix": "importd"
-  },
   "es: importas": {
     "body": ["import * as ${2:$1} from '$1'"],
     "description": "import * as…",
     "prefix": "importas"
+  },
+  "es: importd": {
+    "body": ["import $2 from '$1'"],
+    "description": "import … from …",
+    "prefix": "importd"
   },
   "jest: mock": {
     "body": [
@@ -57,6 +57,11 @@
     "body": ["describe('when ${1:something}', () => {", "\t$0", "})"],
     "description": "describe(when …)",
     "prefix": "when"
+  },
+  "js: console": {
+    "body": ["console.log($0)"],
+    "description": "console.log(…)",
+    "prefix": "console"
   },
   "react: constructorp": {
     "body": ["constructor(props: ${1:Props}) {", "\tsuper(props)", "\t$0", "}"],
