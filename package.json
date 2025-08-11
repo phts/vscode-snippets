@@ -2,7 +2,7 @@
   "name": "snippets",
   "displayName": "phts's Snippets",
   "description": "My shared snippets for VS Code.",
-  "version": "0.0.0",
+  "version": "1.0.0",
   "publisher": "phts",
   "engines": {
     "vscode": "^1.41.1"
